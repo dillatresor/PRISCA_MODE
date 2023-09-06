@@ -31,7 +31,7 @@
                 </a>
                 <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="layout-static.html">Ajouter Client</a>
+                        <a class="nav-link" href="{{route('/Clients/clients')}}">Ajouter Client</a>
                     </nav>
                 </div>
 
@@ -42,7 +42,7 @@
                 </a>
                 <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="layout-static.html">Ajouter Model</a>
+                        <a class="nav-link" href="{{route('/Models/models')}}">Ajouter Model</a>
                     </nav>
 
             </div>
