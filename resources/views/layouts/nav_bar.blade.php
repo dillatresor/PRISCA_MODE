@@ -23,72 +23,58 @@
                 </a>
                 <div class="sb-sidenav-menu-heading">Interface</div>
 
-               <div>
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                    ACCUEIL
-                 </a>
-               </div>
-
-               <div>
-                <a class="nav-link collapsed" href="{{route('dashboard')}}" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                    CLIENTS
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-               </div>
-
-                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{route('clients')}}">Ajouter Client</a>
+                <div >
+                    <nav class="">
+                        <a class="nav-link" href="{{route('dashboard')}}">ACCUEIL</a>
                     </nav>
                 </div>
 
-                <div>
-                    <a class="nav-link collapsed" href="{{route('models')}}" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                        MODELS
-                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                    </a>
-                </div>
 
-                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{route('models')}}">Ajouter Model</a>
-                    </nav>
-
+               <div >
+                <nav class="">
+                    <a class="nav-link" href="{{route('clients')}}">CLIENTS</a>
+                </nav>
             </div>
 
-               <div>
-                <a class="nav-link collapsed" href="{{route('personnels')}}" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                    PERSONNELS
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-               </div>
-                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{route('personnels')}}">Ajouter Personnel</a>
-                    </nav>
+
+            <div>
+                <nav>
+                    <a class="nav-link" href="{{route('models')}}">MODELS</a>
+                </nav>
             </div>
 
-        <div>
-            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                PAIEMENT
-             </a>
-        </div>
-        <div>
-            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                DEPENSES
-             </a>
-        </div>
 
-        <div>
-            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                COUTURES
-             </a>
-             <div>
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                    RENDEZ-VOUS
-                 </a>
+            <div>
+                <nav>
+                    <a class="nav-link" href="{{route('personnels')}}">PERSONNELS</a>
+                </nav>
             </div>
-        </div>
+
+
+            <div>
+                <nav>
+                    <a class="nav-link" href="{{route('paiement')}}">PAIEMENT</a>
+                </nav>
+            </div>
+
+            <div>
+                <nav>
+                    <a class="nav-link" href="{{route('depenses')}}">DEPENSES</a>
+                </nav>
+            </div>
+
+            <div>
+                <nav>
+                    <a class="nav-link" href="{{route('coutures')}}">COUTURES</a>
+                </nav>
+            </div>
+
+            <div>
+                <nav>
+                    <a class="nav-link" href="{{route('rendez_vous')}}">RENDEZ-VOUS</a>
+                </nav>
+            </div>
+
     </nav>
 </div>
 </body>

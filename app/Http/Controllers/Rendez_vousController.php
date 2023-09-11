@@ -10,7 +10,7 @@ class Rendez_vousController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function rendez_vous()
     {
         return view('Rendez_vous.rendez_vous');
     }
@@ -20,7 +20,7 @@ class Rendez_vousController extends Controller
      */
     public function create()
     {
-        return view('Rendez_vous.rendez_vous');
+
     }
 
     /**

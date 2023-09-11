@@ -10,7 +10,7 @@ class PaiementController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function paiement()
     {
         return view('Paiement.paiement');
     }
@@ -20,7 +20,7 @@ class PaiementController extends Controller
      */
     public function create()
     {
-        return view('Paiement.paiement');
+        
     }
 
     /**

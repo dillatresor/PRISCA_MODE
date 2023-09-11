@@ -20,7 +20,7 @@ class PersonnelsController extends Controller
      */
     public function ajout_personnels()
     {
-        return view('Personnels.ajout_personnels');
+       
     }
 
     /**

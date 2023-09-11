@@ -10,7 +10,7 @@ class CouturesController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function coutures()
     {
         return view('Coutures.coutures');
     }
@@ -20,7 +20,7 @@ class CouturesController extends Controller
      */
     public function create()
     {
-        return view('Coutures.ajout_coutures');
+       
     }
 
     /**

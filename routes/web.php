@@ -3,6 +3,10 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\ModelsController;
 use App\Http\Controllers\PersonnelsController;
+use App\Http\Controllers\DepensesController;
+use App\Http\Controllers\PaiementController;
+use App\Http\Controllers\CouturesController;
+use App\Http\Controllers\Rendez_vousController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,14 +28,20 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('Clients/ajout_client', [ClientsController::class, 'create'])->name('ajout_client');
 Route::get('Clients/clients', [ClientsController::class, 'clients'])->name('clients');
 
-Route::get('Models/ajout_models', [ModelsController::class, 'ajout_models'])->name('ajout_models');
 Route::get('Models/models', [ModelsController::class, 'models'])->name('models');
 
-Route::get('Personnels/ajout_personnels', [PersonnelsController::class, 'ajout_personnels'])->name('ajout_personnels');
 Route::get('Personnels/personnels', [PersonnelsController::class, 'personnels'])->name('personnels');
+
+Route::get('Depenses/depenses', [DepensesController::class, 'depenses'])->name('depenses');
+
+Route::get('Paiement/paiement', [PaiementController::class, 'paiement'])->name('paiement');
+
+Route::get('Coutures/coutures', [CouturesController::class, 'coutures'])->name('coutures');
+
+Route::get('Rendez_vous/rendez_vous', [Rendez_vousController::class, 'rendez_vous'])->name('rendez_vous');
+
 
 
 

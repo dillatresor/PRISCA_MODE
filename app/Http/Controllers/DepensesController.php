@@ -10,7 +10,7 @@ class DepensesController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function depenses()
     {
         return view('Depenses.depenses');
     }
