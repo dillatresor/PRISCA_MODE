@@ -28,7 +28,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('liste_des_clientclients', [ClientsController::class, 'clients'])->name('clients');
+Route::get('liste_des_client', [ClientsController::class, 'clients'])->name('clients');
 Route::get('formulaire_ajout_du client', [ClientsController::class, 'ajout_client'])->name('ajout_client');
 Route::post('enregistrement_client', [ClientsController::class, 'store'])->name('store_client');
 
@@ -36,9 +36,9 @@ Route::get('Models/models', [ModelsController::class, 'models'])->name('models')
 Route::get('Models/ajout_models', [ModelsController::class, 'ajout_models'])->name('ajout_models');
 Route::post('ajouter/traitement_modele', [ModelsController::class, 'store'])->name('store_models');
 
-Route::get('Personnels/personnels', [PersonnelsController::class, 'personnels'])->name('personnels');
-Route::get('Personnels/ajout_personnels', [PersonnelsController::class, 'ajout_personnels'])->name('ajout_personnels');
-Route::post('ajouter/traitement', [PersonnelsController::class, 'store'])->name('store_personnels');
+Route::get('liste_des_personnels', [PersonnelsController::class, 'personnels'])->name('personnels');
+Route::get('formulaire_personnels', [PersonnelsController::class, 'ajout_personnels'])->name('ajout_personnels');
+Route::post('enregistrer_personnels', [PersonnelsController::class, 'store'])->name('store_personnels');
 
 Route::get('Depenses/depenses', [DepensesController::class, 'depenses'])->name('depenses');
 

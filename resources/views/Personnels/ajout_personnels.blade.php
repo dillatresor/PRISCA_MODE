@@ -10,7 +10,7 @@
         </div>
     @endif
 
-        <form action="{{route('store_client')}}" method="POST" class="form-group">
+        <form action="{{route('store_personnels')}}" method="POST" class="form-group">
             @csrf
             <div>
                 <section>
@@ -25,7 +25,7 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="">Entrer le prenoms </label>
-                                <input type="text" name="prenoms" class="form-control"  required>
+                                <input type="text" name="prenom" class="form-control"  required>
                             </div>
                         </div>
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Personnels;
 
 class PersonnelsController extends Controller
 {
@@ -12,7 +13,8 @@ class PersonnelsController extends Controller
      */
     public function personnels()
     {
-        return view('Personnels.personnels');
+        $personnels = Personnels::all();
+        return view('Personnels.personnels' , compact('personnels'));
     }
 
     /**
@@ -20,7 +22,7 @@ class PersonnelsController extends Controller
      */
     public function ajout_personnels()
     {
-       
+        return view('Personnels.ajout_personnels');
     }
 
     /**
@@ -28,7 +30,25 @@ class PersonnelsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        //$request->validate([
+        //     'nom'=>'required',
+        //      'prenom'=>'required',
+         //      'adresse'=>'required',
+        //      'telephone'=>'required',
+        //      'type_personnel'=>'required',
+       //// ]);
+
+       $personnels = new Personnels();
+       $personnels->nom = $request->nom;
+       $personnels->prenom = $request->prenom;
+       $personnels->adresse = $request->adresse;
+       $personnels->telephone = $request->telephone;
+       $personnels->type_personnel = $request->type_personnel;
+       $personnels->save();
+
+       return redirect()->route('ajout_personnels')->with('status', 'Le personnel a bien été ajouté.');
+
     }
 
     /**

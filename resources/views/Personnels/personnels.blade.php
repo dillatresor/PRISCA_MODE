@@ -30,16 +30,17 @@
                                                              <th>Type personnel</th>
                                                              <th>Action</th>
 
+
                                                          </tr>
                                                         </thead>
                                                         @foreach($personnels as $personnels)
                                                         <tr>
-                                                            <td>{{ $personnel->id}}</td>
-                                                            <td>{{ $personnel->nom}}</td>
-                                                            <td>{{ $personnel->prenom}}</td>
-                                                            <td>{{ $personnel->adresse}}</td>
-                                                            <td>{{ $personnel->telephone}}</td>
-                                                            <td>{{ $personnel->type_personnel}}</td>
+                                                            <td>{{ $personnels->id}}</td>
+                                                            <td>{{ $personnels->nom}}</td>
+                                                            <td>{{ $personnels->prenom}}</td>
+                                                            <td>{{ $personnels->adresse}}</td>
+                                                            <td>{{ $personnels->telephone}}</td>
+                                                            <td>{{ $personnels->type_personnel}}</td>
 
 
                                                             <td>
