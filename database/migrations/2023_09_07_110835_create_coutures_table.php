@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('coutures', function (Blueprint $table) {
             $table->id();
+            $table->string('libelle');
+            $table->date('date_depot');
+            $table->date('date_recuperation');
+
             $table->timestamps();
         });
     }

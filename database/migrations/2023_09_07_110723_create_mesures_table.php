@@ -13,6 +13,28 @@ return new class extends Migration
     {
         Schema::create('mesures', function (Blueprint $table) {
             $table->id();
+            $table->Integer('poitrine');
+            $table->Integer('taille_robe');
+            $table->Integer('bassins');
+            $table->Integer('longueur');
+            $table->Integer('dos');
+            $table->Integer('genoux');
+            $table->Integer('manches');
+            $table->Integer('hanches');
+            $table->Integer('cuisses');
+            $table->Integer('cou');
+            $table->Integer('epaules');
+            $table->Integer('poignets');
+            $table->Integer('tour_ventre');
+            $table->Integer('demi_ourlet');
+            $table->Integer('entrejambe');
+            $table->Integer('longueur_veste');
+            $table->Integer('longueur_pantalon');
+            $table->Integer('longueur_gilet');
+            $table->Integer('mollet');
+            $table->Integer('coude');
+            $table->date('date_mesure');
+           
             $table->timestamps();
         });
     }

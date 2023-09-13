@@ -5,23 +5,22 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ModelsController extends Controller
+class OffcanvasController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function models()
+    public function offcanvas()
     {
-
-        return view('Models.models');
+        return view('Offcanvas.offcanvas');
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function ajout_models()
+    public function create()
     {
-        return view('Models.ajout_models');
+        //
     }
 
     /**
@@ -29,19 +28,7 @@ class ModelsController extends Controller
      */
     public function store(Request $request)
     {
-         //$request->validate([
-        //     'nom_modele'=>'required',
-        //      'type_modele'=>'required',
-        //      'image'=>'required',
-       //// ]);
-
-       $models = new Models();
-       $models->nom_modele = $request->nom_modele;
-       $models->type_modele = $request->type_modele;
-       $models->image = $request->image;
-       $models->save();
-
-       return redirect()->route('ajout_models')->with('status', 'Le model a bien été ajouté.');
+        //
     }
 
     /**
