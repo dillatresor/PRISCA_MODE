@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\paiements;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -12,15 +12,16 @@ class PaiementController extends Controller
      */
     public function paiement()
     {
-        return view('Paiement.paiement');
+        $paiement=Paiements::all();
+        return view('Paiement.paiement' , compact('paiement'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function ajout_paiement()
     {
-        
+        return view('Paiement.ajout_paiement');
     }
 
     /**
@@ -28,7 +29,22 @@ class PaiementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        // $request->validate([
+        //    'montant_payer'=>'required',
+        //    'avance'=>'required',
+        //    'reste'=>'required',
+        //    'date_paiement'=>'required',
+      //  ]);
+
+       $paiement = new Paiements();
+       $paiement->montant_payer = $request->montant_payer;
+       $paiement->avance = $request->avance;
+       $paiement->reste = $request->reste;
+       $paiement->date_paiement = $request->date_paiement;
+       $paiement->save();
+
+       return redirect()->route('ajout_paiement')->with('status', 'Le model a bien été ajouté.');
     }
 
     /**

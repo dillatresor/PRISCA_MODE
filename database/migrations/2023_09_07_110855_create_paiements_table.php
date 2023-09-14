@@ -16,7 +16,6 @@ return new class extends Migration
             $table->Integer('montant_payer');
             $table->Integer('avance');
             $table->Integer('reste');
-            $table->string('mode_paiement');
             $table->date('date_paiement');
 
             $table->timestamps();

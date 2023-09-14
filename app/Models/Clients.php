@@ -15,5 +15,7 @@ class Clients extends Model
         'telephone',
         'sexe',
     ];
-
+      function Coutures(){
+        return $this->belongsTo(couture::class,'clients_id');
+      }
 }

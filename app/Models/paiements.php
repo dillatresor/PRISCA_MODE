@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class paiements extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'montant_payer',
+        'avance',
+        'reste',
+        'date_paiement',
+       
+
+    ];
 }

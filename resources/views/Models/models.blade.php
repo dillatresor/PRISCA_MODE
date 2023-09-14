@@ -14,6 +14,16 @@
                                 <a href="{{route('ajout_models')}}">
                                 <button class="btn btn-secondary" type="button">AJOUTER MODELE </button>
                             </a>
-                            </div>
 
+                            </div>
+                            @foreach ($models as $mod)
+
+                            <div class="card col-xxl-3 col-md-4" style="">
+                                <img src="{{asset('storage'). '/' .$mod->image}}" class="" alt="...">
+                                <div class="card-body">
+                                  <h4 class="text-center">{{ $mod->nom_modele }}</h4>
+                                </div>
+                              </div>
+
+                              @endforeach
 

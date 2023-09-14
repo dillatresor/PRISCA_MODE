@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Models;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -12,8 +12,8 @@ class ModelsController extends Controller
      */
     public function models()
     {
-
-        return view('Models.models');
+        $models=Models::all();
+        return view('Models.models' , compact('models'));
     }
 
     /**
@@ -29,11 +29,11 @@ class ModelsController extends Controller
      */
     public function store(Request $request)
     {
-         //$request->validate([
-        //     'nom_modele'=>'required',
-        //      'type_modele'=>'required',
-        //      'image'=>'required',
-       //// ]);
+        // $request->validate([
+        //    'nom_modele'=>'required',
+        //    'type_modele'=>'required',
+        //    'image'=>'required',
+      //  ]);
 
        $models = new Models();
        $models->nom_modele = $request->nom_modele;

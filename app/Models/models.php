@@ -9,7 +9,8 @@ class models extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'nom_model',
+        'nom_modele',
+        'type_modele',
         'image',
     ];
 }

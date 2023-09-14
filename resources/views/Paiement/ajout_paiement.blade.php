@@ -2,7 +2,7 @@
 <div class="col-lg-9 mt-5">
     <div class="card">
         <div class="card-body">
-        <h3 class="text-center"><strong>ENREGISTREMENT MODELE</strong></h3>
+        <h3 class="text-center"><strong>NOUVEAU PAIEMENT</strong></h3>
 
         @if (session('status'))
         <div class="alert alert-success">
@@ -10,36 +10,43 @@
         </div>
     @endif
 
-        <form action="{{route('store_models')}}" method="POST" class="form-group" enctype="multipart/form-data">
+        <form action="{{route('store_paiement')}}" method="POST" class="form-group">
             @csrf
+
             <div>
                 <section>
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="">Entrer nom modele </label>
-                                <input type="text" name="nom_modele" class="form-control"  required>
+                                <label for="">Entrer le montant </label>
+                                <input type="text" name="montant_payer" class="form-control"  required>
                             </div>
                         </div>
 
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="">Choisir le type</label>
-                                <select name="type_modele" class="form-control" required>
-                                    <option value="">-----------</option>
-                                    <option value="Femme">Femme</option>
-                                    <option value="Homme">Homme</option>
-                                    <option value="Enfant">Enfant</option>
-                                </select>
+                                <label for="">Avance </label>
+                                <input type="text" name="avance" class="form-control"  required>
                             </div>
                         </div>
 
+
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="">Choisir image </label>
-                                <input type="file" name="image" class="form-control"  required>
+                                <label for="">Reste à payer</label>
+                                <input type="text" name="reste" class="form-control" required>
                             </div>
                         </div>
+
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="">Date de paiement</label>
+                                <input type="date" name="date_paiement" class="form-control" required>
+                            </div>
+                        </div>
+
+
 
 
 
@@ -51,7 +58,7 @@
 
                 </div>
                 <div class="d-grid gap-2 mt-4">
-                    <a href="{{route('models')}}"><button type="button" class="btn btn-danger">VOIR LA LISTE DES MODELES</button></a>
+                    <a href="{{route('paiement')}}"><button type="button" class="btn btn-danger">VOIR LA LISTE DES PAIEMENTS</button></a>
                 </div>
 
 

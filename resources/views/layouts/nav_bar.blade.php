@@ -69,11 +69,7 @@
                 </nav>
             </div>
 
-            <div>
-                <nav>
-                    <a class="nav-link" href="{{route('rendez_vous')}}">RENDEZ-VOUS</a>
-                </nav>
-            </div>
+           
 
     </nav>
 </div>

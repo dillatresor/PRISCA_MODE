@@ -34,7 +34,7 @@ Route::post('enregistrement_client', [ClientsController::class, 'store'])->name(
 
 Route::get('Models/models', [ModelsController::class, 'models'])->name('models');
 Route::get('Models/ajout_models', [ModelsController::class, 'ajout_models'])->name('ajout_models');
-Route::post('ajouter/traitement_modele', [ModelsController::class, 'store'])->name('store_models');
+Route::post('ajout_models', [ModelsController::class, 'store'])->name('store_models');
 
 Route::get('liste_des_personnels', [PersonnelsController::class, 'personnels'])->name('personnels');
 Route::get('formulaire_personnels', [PersonnelsController::class, 'ajout_personnels'])->name('ajout_personnels');
@@ -43,6 +43,9 @@ Route::post('enregistrer_personnels', [PersonnelsController::class, 'store'])->n
 Route::get('Depenses/depenses', [DepensesController::class, 'depenses'])->name('depenses');
 
 Route::get('Paiement/paiement', [PaiementController::class, 'paiement'])->name('paiement');
+Route::get('formulaire_paiement', [PaiementController::class, 'ajout_paiement'])->name('ajout_paiement');
+Route::post('addition_paiement', [PaiementController::class, 'store'])->name('store_paiement');
+
 
 Route::get('Coutures/coutures', [CouturesController::class, 'coutures'])->name('coutures');
 
