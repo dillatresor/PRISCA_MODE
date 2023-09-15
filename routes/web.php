@@ -44,10 +44,12 @@ Route::get('Depenses/depenses', [DepensesController::class, 'depenses'])->name('
 
 Route::get('Paiement/paiement', [PaiementController::class, 'paiement'])->name('paiement');
 Route::get('formulaire_paiement', [PaiementController::class, 'ajout_paiement'])->name('ajout_paiement');
-Route::post('addition_paiement', [PaiementController::class, 'store'])->name('store_paiement');
+Route::post('nouveau_paiement', [PaiementController::class, 'store'])->name('store_paiement');
 
 
 Route::get('Coutures/coutures', [CouturesController::class, 'coutures'])->name('coutures');
+Route::get('formulaire_coutures', [CouturesController::class, 'ajout_coutures'])->name('ajout_coutures');
+Route::post('addition_coutures', [CouturesController::class, 'store'])->name('store_coutures');
 
 Route::get('Rendez_vous/rendez_vous', [Rendez_vousController::class, 'rendez_vous'])->name('rendez_vous');
 

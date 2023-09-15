@@ -47,6 +47,20 @@
                         </div>
 
 
+                        <div class="col-lg-6 mt-3">
+
+                            <select class="form-control" style="width: 100%" name="coutures_id">
+                               <option>Selectionner couture</option>;
+
+                               @foreach ($coutures as  $coutures )
+                               <option value="{{  $coutures->id }}">{{  $coutures->libelle }}</option>;
+
+                               @endforeach
+
+
+
+                               </select>
+                           </div>
 
 
 

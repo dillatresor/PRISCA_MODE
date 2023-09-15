@@ -16,8 +16,12 @@ return new class extends Migration
             $table->string('libelle');
             $table->date('date_depot');
             $table->date('date_recuperation');
-
+            $table->unsignedBigInteger('models_id')->unsigned();
+            $table->foreign('models_id')->references('id')->on('models')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('clients_id')->unsigned();
+            $table->foreign('clients_id')->references('id')->on('clients')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
+
         });
     }
 

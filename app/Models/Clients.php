@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use App\Models\Coutures;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,7 +15,9 @@ class Clients extends Model
         'telephone',
         'sexe',
     ];
-      function Coutures(){
-        return $this->belongsTo(couture::class,'clients_id');
+
+    function coutures(){
+        return $this->hasOne(coutures::class);
+       }
       }
-}
+

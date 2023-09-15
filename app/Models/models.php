@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use App\Models\Coutures;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,4 +13,8 @@ class models extends Model
         'type_modele',
         'image',
     ];
+
+    function coutures(){
+        return $this->hasOne(coutures::class);
+       }
 }

@@ -18,7 +18,7 @@
                             </div>
                             @foreach ($models as $mod)
 
-                            <div class="card col-xxl-3 col-md-4" style="">
+                            <div class="card col-xxl-3 col-md-2 card rounded float-start mt-4" style="">
                                 <img src="{{asset('storage'). '/' .$mod->image}}" class="" alt="...">
                                 <div class="card-body">
                                   <h4 class="text-center">{{ $mod->nom_modele }}</h4>

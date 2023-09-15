@@ -27,6 +27,7 @@
                                                              <th>Avance</th>
                                                              <th>Reste</th>
                                                              <th>Date paiement</th>
+                                                             <th>Libelle</th>
                                                              <th>Action</th>
 
                                                          </tr>
@@ -34,10 +35,11 @@
                                                         @foreach($paiement as $paiement)
                                                         <tr>
                                                             <td>{{ $paiement->id}}</td>
-                                                            <td>{{ $paiement->montant}}</td>
+                                                            <td>{{ $paiement->montant_payer}}</td>
                                                             <td>{{ $paiement->avance}}</td>
                                                             <td>{{ $paiement->reste}}</td>
                                                             <td>{{ $paiement->date_paiement}}</td>
+                                                            <td>{{ $paiement->coutures->libelle}}</td>
 
                                                             <td>
                                                                 <a href="">

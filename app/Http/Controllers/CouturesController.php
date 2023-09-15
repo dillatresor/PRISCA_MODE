@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Coutures;
+use App\Models\Models;
+use App\Models\Clients;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -12,15 +15,19 @@ class CouturesController extends Controller
      */
     public function coutures()
     {
-        return view('Coutures.coutures');
+        $coutures = Coutures::all();
+        return view('Coutures.coutures' , compact('coutures'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function ajout_coutures()
+
     {
-       
+        $models = Models::all();
+        $clients = Clients::all();
+        return view('Coutures.ajout_coutures', compact('models', 'clients'));
     }
 
     /**
@@ -28,7 +35,26 @@ class CouturesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       // $request->validate([
+        //     'montant' => 'required',
+        //     'date_depot' => 'required',
+        //     'date_recuperation' => 'required',
+        //     'id_clients' => 'required',
+        //     'models_id' => 'required',
+        // ]);
+
+        $coutures = new coutures();
+        $coutures->libelle = $request->libelle;
+        $coutures->date_depot = $request->date_depot;
+        $coutures->date_recuperation = $request->date_recuperation;
+        $coutures->models_id = $request->models_id;
+        $coutures->clients_id = $request->clients_id;
+
+
+        $coutures->save();
+
+        return redirect()->route('ajout_coutures')->with('status', 'la couture a bien été ajouter avec succès');
+
     }
 
     /**
