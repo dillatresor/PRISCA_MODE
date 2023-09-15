@@ -13,28 +13,32 @@ return new class extends Migration
     {
         Schema::create('mesures', function (Blueprint $table) {
             $table->id();
-            $table->Integer('poitrine');
-            $table->Integer('taille_robe');
-            $table->Integer('bassins');
-            $table->Integer('longueur');
-            $table->Integer('dos');
-            $table->Integer('genoux');
-            $table->Integer('manches');
-            $table->Integer('hanches');
-            $table->Integer('cuisses');
+            $table->Integer('tete');
             $table->Integer('cou');
-            $table->Integer('epaules');
-            $table->Integer('poignets');
-            $table->Integer('tour_ventre');
-            $table->Integer('demi_ourlet');
-            $table->Integer('entrejambe');
-            $table->Integer('longueur_veste');
-            $table->Integer('longueur_pantalon');
-            $table->Integer('longueur_gilet');
+            $table->Integer('epaule');
+            $table->Integer('longueur_de_bras');
+            $table->Integer('poitrine');
+            $table->Integer('tour_de_taille');
+            $table->Integer('longueur_du_corps');
+            $table->Integer('hanches');
+            $table->Integer('cuisse');
+            $table->Integer('genou');
             $table->Integer('mollet');
+            $table->Integer('cheville');
+            $table->Integer('biceps');
             $table->Integer('coude');
-            $table->date('date_mesure');
-           
+            $table->Integer('avant_bras');
+            $table->Integer('poignet');
+            $table->Integer('poignet_coude');
+            $table->Integer('entrejambe');
+            $table->Integer('genou_cheville');
+            $table->Integer('couture_exterieure');
+            $table->Integer('hauteur_totale');
+            $table->unsignedBigInteger('clients_id')->unsigned();
+            $table->foreign('clients_id')->references('id')->on('clients')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('models_id')->unsigned();
+            $table->foreign('models_id')->references('id')->on('models')->onDelete('cascade')->onUpdate('cascade');
+          
             $table->timestamps();
         });
     }

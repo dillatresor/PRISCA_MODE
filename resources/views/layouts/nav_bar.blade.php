@@ -69,7 +69,14 @@
                 </nav>
             </div>
 
-           
+            <div>
+                <nav>
+                    <a class="nav-link" href="{{route('mesures')}}">MESURES</a>
+                </nav>
+            </div>
+
+
+
 
     </nav>
 </div>

@@ -7,6 +7,7 @@ use App\Http\Controllers\DepensesController;
 use App\Http\Controllers\PaiementController;
 use App\Http\Controllers\CouturesController;
 use App\Http\Controllers\Rendez_vousController;
+use App\Http\Controllers\MesuresController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,6 +51,11 @@ Route::post('nouveau_paiement', [PaiementController::class, 'store'])->name('sto
 Route::get('Coutures/coutures', [CouturesController::class, 'coutures'])->name('coutures');
 Route::get('formulaire_coutures', [CouturesController::class, 'ajout_coutures'])->name('ajout_coutures');
 Route::post('addition_coutures', [CouturesController::class, 'store'])->name('store_coutures');
+
+Route::get('Mesures/mesures', [MesuresController::class, 'mesures'])->name('mesures');
+Route::get('formulaire_mesures', [MesuresController::class, 'ajout_mesures'])->name('ajout_mesures');
+Route::post('new_coutures', [MesuresController::class, 'store'])->name('store_mesures');
+
 
 Route::get('Rendez_vous/rendez_vous', [Rendez_vousController::class, 'rendez_vous'])->name('rendez_vous');
 
